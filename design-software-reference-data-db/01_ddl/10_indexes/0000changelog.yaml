@@ -30,3 +30,19 @@ databaseChangeLog:
             path: ../../05_rollbacks/01_ddl/10_indexes/002_create_indexes_parameterization.rollback.sql
             relativeToChangelogFile: true
             stripComments: false
+
+  - changeSet:
+      id: 7f3e1c2a-9b44-4d86-a5e7-2c1b8f0d6a93
+      author: Santiago gordo perez
+      labels: "HU-R2-003,ddl,performance,indexes,rollbacks"
+      comment: Adds the active catalog detail access path used by the active-catalog report and catalog detail pagination.
+      changes:
+        - sqlFile:
+            path: 003_create_indexes_performance.sql
+            relativeToChangelogFile: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/10_indexes/003_create_indexes_performance.rollback.sql
+            relativeToChangelogFile: true
+            stripComments: false
